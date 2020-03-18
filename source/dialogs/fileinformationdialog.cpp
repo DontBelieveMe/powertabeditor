@@ -33,13 +33,13 @@ FileInformationDialog::FileInformationDialog(
     ui->songTypeButtonGroup->setId(
         ui->lessonButton, static_cast<int>(ScoreInfo::ScoreType::Lesson));
 
-    connect(ui->songTypeButtonGroup, SIGNAL(buttonClicked(QAbstractButton *)),
+    (void)connect(ui->songTypeButtonGroup, SIGNAL(buttonClicked(QAbstractButton *)),
             this, SLOT(handleSongTypeButtonClick(QAbstractButton *)));
 
-    connect(ui->releaseTypeList, SIGNAL(currentRowChanged(int)), this,
+    (void)connect(ui->releaseTypeList, SIGNAL(currentRowChanged(int)), this,
             SLOT(handleReleaseTypeChanged(int)));
 
-    connect(ui->traditionalSongValue, SIGNAL(toggled(bool)), this,
+    (void)connect(ui->traditionalSongValue, SIGNAL(toggled(bool)), this,
             SLOT(handleAuthorTypeChanged(bool)));
 
     ui->lessonLevelButtonGroup->setId(
